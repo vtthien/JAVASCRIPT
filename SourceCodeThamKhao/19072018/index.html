@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- external -->
+    <script src="script.js"></script>
+  </head>
+  <body onload="onloadEvent()">
+    <p id="demo" onclick="changeContent()">THIEN TAO LAO</p>
+
+<input type="text" name="username" value="" id="username">
+<input type="password" name="password" value="" id="password">
+<button type="button" name="button" onclick="xuly()">Xu ly</button>
+  </body>
+</html>
+<script type="text/javascript">
+  // internal
+  function changeContent()
+  {
+    document.getElementById("demo").innerHTML = "THIEN DEP CHAI";
+    document.getElementById("demo").innerHTML = sapXepMang(arr).toString();
+  }
+
+  function xulyKeyDown()
+  {
+    alert('key down ne');
+  }
+  function onloadEvent()
+  {
+
+  }
+  function xuly(){
+    console.log("START XU LY");
+    var inputUserName = document.getElementById("username").value;
+    var inputPassword = document.getElementById("password").value;
+    console.log("FNINISH GET INFORMATION");
+    if (inputUserName == "admin" && inputPassword=="123456") {
+      console.log("ADMIN CONDITION");
+      alert("Admin login");
+    }
+    else if(inputUserName =="thien" && inputPassword == "321")
+    {
+      console.log("THIEN CONDITION");
+      alert("Thien login");
+    }
+    console.log("FNINISH CHECK ACCOUNT 01");
+    //var x = inputPassword[sssss];
+console.log("FNINISH CHECK ACCOUNT");
+    switch (inputUserName) {
+      case "admin":
+      console.log("SWITCH ADMIN CONDITION");
+          // //console.log(inputPassword);
+          // for (var i = 0; i < inputPassword.length; i++) {
+          //   console.log(inputPassword[i]);
+          // }
+
+
+          var j=0;
+          // while (j < inputPassword.length) {
+          //   console.log(inputPassword[j]);
+          //   j = j + 1;
+          // }
+        do {
+          console.log(inputPassword[j]);
+             j = j + 1;
+             continue;
+             console.log();
+        } while (j < inputPassword.length);
+        console.log('out while');
+        break;
+      case "thien":
+      case "guest":
+      console.log("SWITCH THIEN GUEST CONDITION");
+          console.log('thien hoac guestt');
+        break;
+      default:
+          alert('truong hop ngoai le');
+        break;
+    }
+  }
+</script>
